@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "64fbfe0a-4bf8-4062-bfe1-f59ecd791fb3",
+		"name": "K-Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25815321",
+		"_collection_link": "https://lunar-astronaut-663061.postman.co/workspace/New-Team-Workspace~5dffac1d-bf9d-45f7-8f73-f2664705c32f/collection/25815321-64fbfe0a-4bf8-4062-bfe1-f59ecd791fb3?action=share&source=collection_link&creator=25815321"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Product?PageSize=10&PageNumber=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Product/PRD3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Product",
+								"PRD3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productCode\": \"PRD4\",\r\n    \"productName\": \"Product 3\",\r\n    \"description\": \"Description 3\",\r\n    \"productType\": \"Type 3\",\r\n    \"brand\": \"Brand 3\",\r\n    \"unitOfMeasurement\": \"Unit 3\",\r\n    \"costOfGoodsSold\": 100.0,\r\n    \"unitPrice\": 200.0,\r\n    \"quantity\": 120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ge inventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Product/inventory?PageSize=10&PageNumber=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Product",
+								"inventory"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productCode\": \"PRD1\",  \r\n    \"productName\": \"Product 1 U\",\r\n    \"description\": \"Description 1 U\",\r\n    \"productType\": \"Type 1 U\",\r\n    \"brand\": \"Brand 1 U\",\r\n    \"unitOfMeasurement\": \"Unit 1 U\",\r\n    \"costOfGoodsSold\": 11,\r\n    \"unitPrice\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Product/PRD1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Product",
+								"PRD1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Store?PageSize=10&PageNumber=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Store"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Store/STR1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Store",
+								"STR1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeCode\": \"STR4\",\r\n    \"description\": \"Description 1\",\r\n    \"address\": \"Address 1\",\r\n    \"phone\": \"112211\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Store",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"storeCode\": \"STR1\",\r\n    \"description\": \"Description 1 U\",\r\n    \"address\": \"Address 1 U\",\r\n    \"phone\": \"1122112\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Store/STR1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Store",
+								"STR1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Customer?PageSize=10&PageNumber=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Customer/25",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Customer",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Customer C\",\r\n    \"address\": \"Address 3\",\r\n    \"phone\": \"012221\",\r\n    \"customerType\": \"Company\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 25,\r\n    \"customerName\": \"Customer 1 u\",\r\n    \"address\": \"Address 1 u\",\r\n    \"phone\": \"0122212\",\r\n    \"customerType\": \"Mrs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Customer/25",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Customer",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerID\": 25,\r\n  \"storeId\": 11,\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": 18,\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 20\r\n    },\r\n{\r\n      \"productId\": 19,\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 25\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"status\": \"payment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7288/api/Order/status",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Order",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7288/api/Order?PageSize=10&PageNumber=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7288",
+							"path": [
+								"api",
+								"Order"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "10"
+								},
+								{
+									"key": "PageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
